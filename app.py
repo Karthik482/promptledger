@@ -236,7 +236,7 @@ def get_user_con() -> duckdb.DuckDBPyConnection:
 # ============ SIDEBAR ============
 with st.sidebar:
     st.markdown("### ● PromptLedger")
-    st.caption("v0.1 — Finance Analytics Demo")
+    st.caption("v0.1 Beta — Finance Analytics Demo")
 
     # Mode badge
     if st.session_state.data_mode == "demo":
