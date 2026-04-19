@@ -1,0 +1,28 @@
+# Secrets — NEVER commit
+.streamlit/secrets.toml
+.env
+*.key
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual env (accidentally created in this folder)
+Lib/
+Scripts/
+share/
+etc/
+Include/
+pyvenv.cfg
+
+# Other
+venv/
+.venv/
+.vscode/
+.idea/
+.DS_Store
+*.duckdb
+
+# Zip files
+*.zip

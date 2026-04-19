@@ -1,0 +1,102 @@
+{
+  "run_at": "2026-04-18 23:47:12 UTC",
+  "total_tests": 50,
+  "passed": 47,
+  "failed": 3,
+  "accuracy": 0.94,
+  "avg_latency_ms": 612,
+  "avg_confidence": 0.918,
+  "per_skill": {
+    "quarterly_revenue_summary": {
+      "display_name": "Quarterly Revenue Summary",
+      "total": 10,
+      "passed": 10,
+      "accuracy": 1.0,
+      "avg_latency_ms": 587
+    },
+    "net_revenue_retention": {
+      "display_name": "Net Revenue Retention (NRR)",
+      "total": 10,
+      "passed": 9,
+      "accuracy": 0.9,
+      "avg_latency_ms": 622
+    },
+    "customer_churn_analysis": {
+      "display_name": "Customer Churn Analysis",
+      "total": 10,
+      "passed": 9,
+      "accuracy": 0.9,
+      "avg_latency_ms": 608
+    },
+    "headcount_variance": {
+      "display_name": "Headcount Variance vs Plan",
+      "total": 10,
+      "passed": 10,
+      "accuracy": 1.0,
+      "avg_latency_ms": 595
+    },
+    "top_customer_concentration": {
+      "display_name": "Top Customer Concentration",
+      "total": 10,
+      "passed": 9,
+      "accuracy": 0.9,
+      "avg_latency_ms": 648
+    }
+  },
+  "results": [
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "what's our Q3 ARR by segment", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.98, "reasoning": "Direct ARR-by-segment ask matches this skill exactly.", "passed": true, "latency_ms": 542},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "show me revenue by segment for last quarter", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.97, "reasoning": "Quarterly revenue split by segment.", "passed": true, "latency_ms": 558},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "ARR breakdown by customer tier", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.95, "reasoning": "Customer tier is segment; ARR breakdown is the core output.", "passed": true, "latency_ms": 612},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "quarterly revenue split", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.93, "reasoning": "Quarterly revenue split phrasing.", "passed": true, "latency_ms": 581},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "how much ARR did each segment contribute last quarter", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.97, "reasoning": "ARR contribution by segment.", "passed": true, "latency_ms": 595},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "Q3 revenue summary", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.96, "reasoning": "Direct phrasing.", "passed": true, "latency_ms": 562},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "give me the latest quarter ARR", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.94, "reasoning": "Latest quarter ARR is the headline number this skill returns.", "passed": true, "latency_ms": 601},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "ending ARR by segment", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.95, "reasoning": "Ending ARR by segment is the core output.", "passed": true, "latency_ms": 588},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "current quarter revenue by customer type", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.94, "reasoning": "Current quarter, by customer type (segment).", "passed": true, "latency_ms": 590},
+    {"expected_skill": "quarterly_revenue_summary", "prompt": "where is our ARR coming from this quarter", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.92, "reasoning": "Revenue source breakdown by segment.", "passed": true, "latency_ms": 651},
+
+    {"expected_skill": "net_revenue_retention", "prompt": "what is our NRR by segment", "predicted_skill": "net_revenue_retention", "confidence": 0.98, "reasoning": "Direct NRR by segment ask.", "passed": true, "latency_ms": 587},
+    {"expected_skill": "net_revenue_retention", "prompt": "net revenue retention breakdown", "predicted_skill": "net_revenue_retention", "confidence": 0.97, "reasoning": "NRR breakdown.", "passed": true, "latency_ms": 575},
+    {"expected_skill": "net_revenue_retention", "prompt": "show me NRR by customer tier", "predicted_skill": "net_revenue_retention", "confidence": 0.97, "reasoning": "NRR by tier (segment).", "passed": true, "latency_ms": 612},
+    {"expected_skill": "net_revenue_retention", "prompt": "how is retention trending by segment", "predicted_skill": "net_revenue_retention", "confidence": 0.85, "reasoning": "Retention trending interpreted as NRR breakdown.", "passed": true, "latency_ms": 678},
+    {"expected_skill": "net_revenue_retention", "prompt": "trailing twelve month NRR", "predicted_skill": "net_revenue_retention", "confidence": 0.99, "reasoning": "TTM NRR is exactly this skill's window.", "passed": true, "latency_ms": 542},
+    {"expected_skill": "net_revenue_retention", "prompt": "are we expanding or churning by segment", "predicted_skill": "customer_churn_analysis", "confidence": 0.62, "reasoning": "Mentioned churn, but expansion implies NRR. Ambiguous.", "passed": false, "latency_ms": 718},
+    {"expected_skill": "net_revenue_retention", "prompt": "NRR last 12 months", "predicted_skill": "net_revenue_retention", "confidence": 0.99, "reasoning": "Trailing 12 month NRR.", "passed": true, "latency_ms": 561},
+    {"expected_skill": "net_revenue_retention", "prompt": "retention rate by segment", "predicted_skill": "net_revenue_retention", "confidence": 0.91, "reasoning": "Retention rate by segment maps to NRR.", "passed": true, "latency_ms": 595},
+    {"expected_skill": "net_revenue_retention", "prompt": "which segment has best NRR", "predicted_skill": "net_revenue_retention", "confidence": 0.98, "reasoning": "NRR ranking by segment.", "passed": true, "latency_ms": 580},
+    {"expected_skill": "net_revenue_retention", "prompt": "is our NRR above 100", "predicted_skill": "net_revenue_retention", "confidence": 0.96, "reasoning": "NRR threshold check.", "passed": true, "latency_ms": 572},
+
+    {"expected_skill": "customer_churn_analysis", "prompt": "show me churn last quarter", "predicted_skill": "customer_churn_analysis", "confidence": 0.97, "reasoning": "Churn over a quarter (90 days).", "passed": true, "latency_ms": 580},
+    {"expected_skill": "customer_churn_analysis", "prompt": "which customers churned recently", "predicted_skill": "customer_churn_analysis", "confidence": 0.95, "reasoning": "Recent churn breakdown.", "passed": true, "latency_ms": 595},
+    {"expected_skill": "customer_churn_analysis", "prompt": "logo churn by segment", "predicted_skill": "customer_churn_analysis", "confidence": 0.98, "reasoning": "Logo churn by segment.", "passed": true, "latency_ms": 565},
+    {"expected_skill": "customer_churn_analysis", "prompt": "dollar churn last 90 days", "predicted_skill": "customer_churn_analysis", "confidence": 0.99, "reasoning": "Dollar churn 90-day window matches exactly.", "passed": true, "latency_ms": 555},
+    {"expected_skill": "customer_churn_analysis", "prompt": "are we losing customers", "predicted_skill": "customer_churn_analysis", "confidence": 0.88, "reasoning": "Customer loss is churn.", "passed": true, "latency_ms": 632},
+    {"expected_skill": "customer_churn_analysis", "prompt": "churn breakdown", "predicted_skill": "customer_churn_analysis", "confidence": 0.96, "reasoning": "Churn breakdown.", "passed": true, "latency_ms": 568},
+    {"expected_skill": "customer_churn_analysis", "prompt": "recent customer cancellations", "predicted_skill": "customer_churn_analysis", "confidence": 0.94, "reasoning": "Cancellations are churn events.", "passed": true, "latency_ms": 590},
+    {"expected_skill": "customer_churn_analysis", "prompt": "lost ARR last quarter", "predicted_skill": "net_revenue_retention", "confidence": 0.55, "reasoning": "Lost ARR could be NRR or churn — ambiguous.", "passed": false, "latency_ms": 712},
+    {"expected_skill": "customer_churn_analysis", "prompt": "who churned this quarter", "predicted_skill": "customer_churn_analysis", "confidence": 0.97, "reasoning": "Quarterly churn list.", "passed": true, "latency_ms": 562},
+    {"expected_skill": "customer_churn_analysis", "prompt": "what's our churn rate", "predicted_skill": "customer_churn_analysis", "confidence": 0.93, "reasoning": "Churn rate is the headline output.", "passed": true, "latency_ms": 575},
+
+    {"expected_skill": "headcount_variance", "prompt": "headcount variance vs plan", "predicted_skill": "headcount_variance", "confidence": 0.99, "reasoning": "Direct match.", "passed": true, "latency_ms": 555},
+    {"expected_skill": "headcount_variance", "prompt": "are we under or over plan on hiring", "predicted_skill": "headcount_variance", "confidence": 0.96, "reasoning": "Under/over plan = variance.", "passed": true, "latency_ms": 582},
+    {"expected_skill": "headcount_variance", "prompt": "headcount by department", "predicted_skill": "headcount_variance", "confidence": 0.92, "reasoning": "Headcount by department is the cut this skill produces.", "passed": true, "latency_ms": 595},
+    {"expected_skill": "headcount_variance", "prompt": "where are we behind on hiring", "predicted_skill": "headcount_variance", "confidence": 0.94, "reasoning": "Behind on hiring = negative variance.", "passed": true, "latency_ms": 612},
+    {"expected_skill": "headcount_variance", "prompt": "actual vs plan headcount", "predicted_skill": "headcount_variance", "confidence": 0.99, "reasoning": "Direct phrasing.", "passed": true, "latency_ms": 548},
+    {"expected_skill": "headcount_variance", "prompt": "which departments are understaffed", "predicted_skill": "headcount_variance", "confidence": 0.95, "reasoning": "Understaffed = under plan.", "passed": true, "latency_ms": 585},
+    {"expected_skill": "headcount_variance", "prompt": "hiring gap by team", "predicted_skill": "headcount_variance", "confidence": 0.93, "reasoning": "Hiring gap by team.", "passed": true, "latency_ms": 601},
+    {"expected_skill": "headcount_variance", "prompt": "headcount snapshot", "predicted_skill": "headcount_variance", "confidence": 0.91, "reasoning": "Headcount snapshot is the latest-month view.", "passed": true, "latency_ms": 598},
+    {"expected_skill": "headcount_variance", "prompt": "are we at plan on people", "predicted_skill": "headcount_variance", "confidence": 0.94, "reasoning": "At plan on people = headcount variance.", "passed": true, "latency_ms": 612},
+    {"expected_skill": "headcount_variance", "prompt": "show me people variance", "predicted_skill": "headcount_variance", "confidence": 0.96, "reasoning": "People variance = headcount.", "passed": true, "latency_ms": 565},
+
+    {"expected_skill": "top_customer_concentration", "prompt": "top 10 customers by ARR", "predicted_skill": "top_customer_concentration", "confidence": 0.99, "reasoning": "Direct match.", "passed": true, "latency_ms": 545},
+    {"expected_skill": "top_customer_concentration", "prompt": "who are our biggest customers", "predicted_skill": "top_customer_concentration", "confidence": 0.97, "reasoning": "Biggest customers = top by ARR.", "passed": true, "latency_ms": 565},
+    {"expected_skill": "top_customer_concentration", "prompt": "customer concentration risk", "predicted_skill": "top_customer_concentration", "confidence": 0.98, "reasoning": "Concentration risk is the core output.", "passed": true, "latency_ms": 558},
+    {"expected_skill": "top_customer_concentration", "prompt": "revenue concentration analysis", "predicted_skill": "top_customer_concentration", "confidence": 0.97, "reasoning": "Revenue concentration analysis.", "passed": true, "latency_ms": 572},
+    {"expected_skill": "top_customer_concentration", "prompt": "show me our largest accounts", "predicted_skill": "top_customer_concentration", "confidence": 0.96, "reasoning": "Largest accounts = top by ARR.", "passed": true, "latency_ms": 588},
+    {"expected_skill": "top_customer_concentration", "prompt": "top customers by revenue", "predicted_skill": "top_customer_concentration", "confidence": 0.99, "reasoning": "Direct phrasing.", "passed": true, "latency_ms": 542},
+    {"expected_skill": "top_customer_concentration", "prompt": "biggest accounts by ARR", "predicted_skill": "top_customer_concentration", "confidence": 0.98, "reasoning": "Biggest accounts.", "passed": true, "latency_ms": 555},
+    {"expected_skill": "top_customer_concentration", "prompt": "what percent of revenue is top 10", "predicted_skill": "top_customer_concentration", "confidence": 0.97, "reasoning": "Top 10 share of revenue.", "passed": true, "latency_ms": 590},
+    {"expected_skill": "top_customer_concentration", "prompt": "customer concentration", "predicted_skill": "top_customer_concentration", "confidence": 0.96, "reasoning": "Customer concentration.", "passed": true, "latency_ms": 568},
+    {"expected_skill": "top_customer_concentration", "prompt": "largest customers", "predicted_skill": "quarterly_revenue_summary", "confidence": 0.51, "reasoning": "Largest customers ambiguous between top-N and segment summary.", "passed": false, "latency_ms": 745}
+  ]
+}
