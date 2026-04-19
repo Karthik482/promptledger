@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor = "#b8ff3c"           # buttons, links (your neon green)
+backgroundColor = "#0a0c0a"        # main bg (near-black)
+secondaryBackgroundColor = "#11140f"  # sidebar, cards
+textColor = "#e8e9e3"              # body text (warm white)
+font = "sans serif"                # or "serif" / "monospace"
